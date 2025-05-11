@@ -121,10 +121,10 @@ def eval_model(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-path", type=str, default="facebook/opt-350m")
+    parser.add_argument("--model-path", type=str, default="/home/cvpr_ug_4/GeoChat/merged_model")
     parser.add_argument("--model-base", type=str, default=None)
-    parser.add_argument("--image-folder", type=str, default="")
-    parser.add_argument("--question-file", type=str, default="tables/question.jsonl")
+    parser.add_argument("--image-folder", type=str, default="/home/cvpr_ug_4/SAR/Vlm_input_images")
+    parser.add_argument("--question-file", type=str, default="tables/question.json1")
     parser.add_argument("--answers-file", type=str, default="answer.jsonl")
     parser.add_argument("--conv-mode", type=str, default="llava_v1")
     parser.add_argument("--num-chunks", type=int, default=1)

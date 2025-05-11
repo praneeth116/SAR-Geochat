@@ -308,6 +308,7 @@ def preprocess_multimodal(
         return sources
 
     for source in sources:
+        
         for sentence in source:
             
             if DEFAULT_IMAGE_TOKEN in sentence['value']:
@@ -799,8 +800,8 @@ def train():
             model = GeoChatLlamaForCausalLM.from_pretrained(
                 model_args.model_name_or_path,
                 cache_dir=training_args.cache_dir,
-                **bnb_model_from_pretrained_args
-            )
+                **bnb_model_from_pretrained_args, ignore_mismatched_sizes = True
+            ) #? ignore_mismatched_sizes = True
     else:
         model = transformers.LlamaForCausalLM.from_pretrained(
             model_args.model_name_or_path,
