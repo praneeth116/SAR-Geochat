@@ -8,3 +8,4 @@ wandb/
 merged_model/
 annotations.json
 **/__pycache__/
+.DS_Store
